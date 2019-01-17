@@ -5,31 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Noelle Caldwell</title>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="test.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Abril+Fatface" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20">
-            <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:rgb(39, 123, 124);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(17, 77, 104);stop-opacity:1" />
-                </linearGradient>
-            </defs>
-            <g>
-                <path stroke="url(#grad1)" fill="url(#grad1)" d="M 0 0 V 6 Q 30 2 60 5 T 100 4 V 0 Z" />
-                <line x1="1" y1="1" x2="2" y2="3" stroke="white" />
-                <text id="name" x="1" y="3.5" font-size="3" fill="white">Noelle Caldwell</text>
-            </g>
-        </svg>
-    </header>
     <div id="container">
-        <p></p><p></p><p></p>
-        <p></p>
-        <p>Hi. I'm Noelle.</p>
+        <header>
+            <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 35">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(39, 123, 124);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(17, 77, 104);stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="dropshadow" height="130%">
+                        <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceAlpha" stdDeviation="0.5"/> 
+                        <feOffset xmlns="http://www.w3.org/2000/svg" dx="2" dy="2" result="offsetblur"/>
+                        <feComponentTransfer xmlns="http://www.w3.org/2000/svg">
+                            <feFuncA type="linear" slope="0.2"/>
+                        </feComponentTransfer>
+                        <feMerge xmlns="http://www.w3.org/2000/svg"> 
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/> 
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g>
+                    <path stroke="url(#grad1)" fill="url(#grad1)" d="M 0 0 V 30 Q 150 10 300 25 T 500 20 V 0 Z" filter="url(#dropshadow)" />
+                    <text id="name" x="4" y="16" font-size="16" fill="white">Noelle Caldwell</text>
+                </g>
+            </svg>
+        </header>
+        <section class="me">
+            <img src="images/me2.jpg" alt="headshot" class="profile">
+            <h1>I'm a full stack web developer who loves learning.</h1>
+            <p class="subtext">I thrive on efficiency and enjoy using tech to develop creative solutions.</p>
+        </section>
+        <div class="divider">
+            <svg viewBox="0 0 500 35">
+                <path stroke="url(#grad1)" d="M 120 25 C 100 20 150 13 250 20 S 410 34, 390 25" filter="url(#dropshadow)" fill="none" />
+            </svg>
+        </div>
+        <!-- first project -->
+        <aside class="left">
+            <h6>DongleMinder</h6>
+            <p>When we started losing track of all the dongles we lend to students, I developed this app to help manage our inventory.</p>
+            <p>
+                <img src="images/logos/react.png" alt="react" class="logo-sm">
+                <img src="images/logos/mysql.png" alt="mysql" class="logo-sm">
+                <img src="images/logos/flask.png" alt="flask" class="logo-sm">
+            </p>
+            <p>View <a href="https://github.com/tehtertot/dongleminder" target="_blank"> Code</a> | <a href="http://157.230.134.58/" target="_blank">Live Demo</a></p>
+        </aside>
+        <article class="project">
+            <p><img src="images/DojoInventory.gif" alt="gif demo"></p>
+        </article>
+        <footer>
+            <ul class="subtext">
+                <a href="https://github.com/tehtertot" target="_blank"><img src="images/logos/github.png" alt="GitHub" class="logo"></a>
+                <a href="https://www.linkedin.com/in/noelle-caldwell-9b419916/" target="_blank"><img src="images/logos/linkedin.png" alt="LinkedIn" class="logo"></a>
+                <a href="#" target="_blank"><img src="images/logos/email.png" alt="Email" class="logo"></a>
+            </ul>
+        </footer>
     </div>
 </body>
 </html>
-
-
