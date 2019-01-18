@@ -1,0 +1,188 @@
+$left-color: #277B7C;   // rgb(39, 123, 124)
+$right-color: #114D68;   // rgb(17, 77, 104)
+$neutral-light: #AAA;
+$neutral-dark: #444;
+
+$text-font: 'Merriweather', serif;
+$header-font: 'Jim Nightshade', sans-serif;
+
+$shadow: 0px 0px 25px 4px #AAA;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $text-font;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        "space space space"
+        "left1 proj1 right1"
+        "left2 proj2 right2"
+        "left3 proj3 right3"
+        "left4 proj4 right4"
+        "footer footer footer";
+    grid-row-gap: 2%;
+    @media only screen and (max-width: 991px) {
+        grid-row-gap: 1%;
+    }
+    @media only screen and (max-width: 600px) {
+        grid-row-gap: 0;
+    }
+}
+
+// CSS GRID POSITIONS
+header { grid-area: header; }
+.divider { grid-area: space; }
+.me { grid-area: main; }
+
+.project.proj1 { grid-area: proj1; }
+aside.right.proj1 { grid-area: right1; }
+
+aside.left.proj2 { grid-area: left2; }
+.project.proj2 { grid-area: proj2; }
+
+.project.proj3 { grid-area: proj3; }
+aside.right.proj3 { grid-area: right3; }
+
+aside.left.proj4 { grid-area: left4; }
+.project.proj4 { grid-area: proj4; }
+
+@media only screen and (max-width: 991px) {
+    .project { display: none; }
+    
+    aside.right.proj1 { grid-area: proj1; }
+    
+    aside.left.proj2 { grid-area: proj2; }
+    
+    aside.right.proj3 { grid-area: proj3; }
+    
+    aside.left.proj4 { grid-area: proj4; }
+}
+
+footer { grid-area: footer; }
+
+// HEADER //
+header {
+    height: 100px; 
+    svg {
+        position: fixed;
+        g text {
+            font-family: $header-font;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        height: 50px;
+    }
+    @media only screen and (max-width: 600px) {
+        height: 33px;
+    }
+}
+
+// ABOUT ME //
+h1 {
+    font-size: 2em;
+    color: $right-color;
+    margin-top: 3%;
+    @media only screen and (max-width: 991px) {
+        font-size: 1.5em;
+    }
+    @media only screen and (max-width: 600px) {
+        font-size: 1em;
+    }
+}
+
+.me {
+    text-align: center;
+    padding: 0 10%;
+    p {
+        margin-top: 5%;
+        color: $neutral-dark;
+    }
+    .profile {
+        border-radius: 50%;
+        width: 30%;
+        margin: 10px auto;
+        box-shadow: $shadow;
+    }
+}
+
+// PROJECTS //
+
+// project explanations //
+aside {
+    h6 {
+        font-size: 110%;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        @media only screen and (max-width: 991px) {
+            font-size: 90%;
+        }
+        @media only screen and (max-width: 600px) {
+            font-size: 80%;
+        }
+    }
+    p {
+        font-size: 80%;
+        margin: 10px 0;
+        .logo {
+            height: 20px;
+            margin: 2px;
+            background: transparent;
+        }
+    }
+}
+
+.left {
+    text-align: right;
+    padding: 15px 0 15px 15px;
+    h6 {
+        border-image: linear-gradient(to right, transparent, transparent, $right-color) 10;
+    }
+}
+.right {
+    text-align: left;
+    padding: 15px 15px 15px 0;
+    h6 {
+        border-image: linear-gradient(to left, transparent, transparent, $right-color) 10;
+    }
+}
+
+// project images //
+.project {
+    text-align: center;
+    padding: 15px;
+
+    p img {
+        padding: 10px;
+        max-width: 90%;
+        box-shadow: $shadow;
+    }
+}
+
+// FOOTER //
+footer {
+    // background: $left-color;
+    background: linear-gradient(to right, $left-color, $right-color);
+    padding: 1.5% 0 1%;
+    ul {
+        text-align: center;
+        list-style: none;
+        li {
+            display: inline;
+        }
+    }
+    .logo {
+        height: 25px;
+        margin: 0 10px;
+    }
+}
