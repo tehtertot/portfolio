@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Noelle Caldwell</title>
-    <link rel="stylesheet" href="test.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Jim+Nightshade" rel="stylesheet">
 </head>
 <body>
     <div id="container">
@@ -31,39 +31,98 @@
                 </defs>
                 <g>
                     <path stroke="url(#grad1)" fill="url(#grad1)" d="M 0 0 V 30 Q 150 10 300 25 T 500 20 V 0 Z" filter="url(#dropshadow)" />
-                    <text id="name" x="4" y="16" font-size="16" fill="white">Noelle Caldwell</text>
+                    <text class="headerName" x="4" y="16" font-size="16" fill="white">Noelle Caldwell</text>
                 </g>
             </svg>
         </header>
+
         <section class="me">
-            <img src="images/me2.jpg" alt="headshot" class="profile">
+            <img src="images/me4.jpg" alt="headshot" class="profile">
             <h1>I'm a full stack web developer who loves learning.</h1>
             <p class="subtext">I thrive on efficiency and enjoy using tech to develop creative solutions.</p>
         </section>
+
         <div class="divider">
             <svg viewBox="0 0 500 35">
                 <path stroke="url(#grad1)" d="M 120 25 C 100 20 150 13 250 20 S 410 34, 390 25" filter="url(#dropshadow)" fill="none" />
             </svg>
         </div>
+
         <!-- first project -->
-        <aside class="left">
+        <article class="project proj1">
+            <p><img src="images/DojoInventory.gif" alt="gif demo"></p>
+        </article>
+        <aside class="right proj1">
             <h6>DongleMinder</h6>
-            <p>When we started losing track of all the dongles we lend to students, I developed this app to help manage our inventory.</p>
+            <p class="desc">When we started losing track of all the dongles we lend to students, I developed this app to help manage our inventory.</p>
             <p>
-                <img src="images/logos/react.png" alt="react" class="logo-sm">
-                <img src="images/logos/mysql.png" alt="mysql" class="logo-sm">
-                <img src="images/logos/flask.png" alt="flask" class="logo-sm">
+                <img src="images/logos/react.png" alt="react" class="logo">
+                <img src="images/logos/mysql.png" alt="mysql" class="logo">
+                <img src="images/logos/flask.png" alt="flask" class="logo">
             </p>
             <p>View <a href="https://github.com/tehtertot/dongleminder" target="_blank"> Code</a> | <a href="http://157.230.134.58/" target="_blank">Live Demo</a></p>
         </aside>
-        <article class="project">
-            <p><img src="images/DojoInventory.gif" alt="gif demo"></p>
+
+        <!-- second project -->
+        <aside class="left proj2">
+            <h6>Error Collector</h6>
+            <p class="desc">For students learning how to code, learning how to identify and interpret errors is difficult but crucial. I developed this app to allow students to screenshot errors and share and troubleshoot them with their classmates.</p>
+            <p>
+                <img src="images/logos/django.png" alt="react" class="logo">
+                <img src="images/logos/mysql.png" alt="mysql" class="logo">
+                <img src="images/logos/materialize.png" alt="mysql" class="logo">
+            </p>
+            <p>View <a href="https://github.com/tehtertot/errors" target="_blank"> Code</a> | <a href="http://errors.ninja/" target="_blank">Live Demo</a></p>
+        </aside>
+        <article class="project proj2">
+            <p><img src="images/errorApp.jpg" alt="error app screenshots"></p>
         </article>
+
+        <!-- third project -->
+        <article class="project proj3">
+            <p><img src="images/gamingCentral.jpg" alt="gaming central screenshots"></p>
+        </article>
+        <aside class="right proj3">
+            <h6>Gaming Central</h6>
+            <p class="desc">My siblings and I love playing board games together, but they live on the other side of the country. I made this application so we could play a few of our favorite games together.</p>
+            <p>
+                <img src="images/logos/mongodb.jpg" alt="react" class="logo">
+                <img src="images/logos/expressjs.png" alt="mysql" class="logo">
+                <img src="images/logos/angular.png" alt="flask" class="logo">
+                <img src="images/logos/node.png" alt="flask" class="logo">
+                <img src="images/logos/socketio.png" alt="socket.io" class="logo">
+            </p>
+            <p>View <a href="https://github.com/tehtertot/gamingCentral" target="_blank"> Code</a></p>
+        </aside>
+
+        <!-- fourth project -->
+        <aside class="left proj4">
+            <h6>Mobile Set</h6>
+            <p class="desc">For my C# capstone project, I learned how to use Xamarin and built a single-player mobile version of the game Set.</p>
+            <p>
+                <img src="images/logos/csharp.png" alt="C#" class="logo">
+                <img src="images/logos/xamarin.png" alt="xamarin" class="logo">
+                <img src="images/logos/sqlite.png" alt="sqlite" class="logo">
+            </p>
+            <p>View <a href="https://github.com/tehtertot/SetGame" target="_blank"> Code</a></p>
+        </aside>
+        <article class="project proj4">
+            <p><img src="images/set.gif" alt="set gif"></p>
+        </article>
+
+        <div class="empty"></div>
+        
         <footer>
-            <ul class="subtext">
-                <a href="https://github.com/tehtertot" target="_blank"><img src="images/logos/github.png" alt="GitHub" class="logo"></a>
-                <a href="https://www.linkedin.com/in/noelle-caldwell-9b419916/" target="_blank"><img src="images/logos/linkedin.png" alt="LinkedIn" class="logo"></a>
-                <a href="#" target="_blank"><img src="images/logos/email.png" alt="Email" class="logo"></a>
+            <ul>
+                <li>
+                    <a href="https://github.com/tehtertot" target="_blank"><img src="images/logos/github.png" alt="GitHub" class="logo"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/noelle-caldwell-9b419916/" target="_blank"><img src="images/logos/linkedin.png" alt="LinkedIn" class="logo"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="images/logos/email.png" alt="Email" class="logo"></a>
+                </li>
             </ul>
         </footer>
     </div>

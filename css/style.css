@@ -1,131 +1,156 @@
 * {
-    /* outline: 1px dotted red; */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Merriweather";
-    color: #1C5A5E;
-}
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif; }
 
 #container {
-    display: grid;
-    grid-template-columns: 20% auto 20%;
-    grid-template-areas: 
-    "header header header"
-        ". main ."
-        "space space space"
-        "left proj right"
-        "left proj right"
-        "left proj right"
-        "left proj right"
-        "footer footer footer";
-    }
-    
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-template-areas: "header header header" ". main ." "space space space" "left1 proj1 right1" "left2 proj2 right2" "left3 proj3 right3" "left4 proj4 right4" "footer footer footer";
+  grid-row-gap: 2%; }
+  @media only screen and (max-width: 991px) {
+    #container {
+      grid-row-gap: 1%; } }
+  @media only screen and (max-width: 600px) {
+    #container {
+      grid-row-gap: 0; } }
+
+header {
+  grid-area: header; }
+
+.divider {
+  grid-area: space; }
+
+.me {
+  grid-area: main; }
+
+.project.proj1 {
+  grid-area: proj1; }
+
+aside.right.proj1 {
+  grid-area: right1; }
+
+aside.left.proj2 {
+  grid-area: left2; }
+
+.project.proj2 {
+  grid-area: proj2; }
+
+.project.proj3 {
+  grid-area: proj3; }
+
+aside.right.proj3 {
+  grid-area: right3; }
+
+aside.left.proj4 {
+  grid-area: left4; }
+
+.project.proj4 {
+  grid-area: proj4; }
+
+@media only screen and (max-width: 991px) {
+  .project {
+    display: none; }
+
+  aside.right.proj1 {
+    grid-area: proj1; }
+
+  aside.left.proj2 {
+    grid-area: proj2; }
+
+  aside.right.proj3 {
+    grid-area: proj3; }
+
+  aside.left.proj4 {
+    grid-area: proj4; } }
+footer {
+  grid-area: footer; }
+
+header {
+  height: 100px; }
+  header svg {
+    position: fixed; }
+    header svg g text {
+      font-family: "Jim Nightshade", sans-serif; }
+  @media only screen and (max-width: 991px) {
     header {
-        grid-area: header;
-    }
-    @media only screen and (max-width: 600px) {
-        header {
-            height: 33px;
-        }
-        h1 {
-            font-size: 1em;
-        }
-    }
-    
-    @media only screen and (min-width: 600px) {
-        header {
-            height: 50px;
-        }
-        h1 {
-            font-size: 1.5em;
-        }
-    }
+      height: 50px; } }
+  @media only screen and (max-width: 600px) {
+    header {
+      height: 33px; } }
 
-    @media only screen and (min-width: 992px) {
-        header {
-            height: 100px;
-        }
-        h1 {
-            font-size: 2em;
-        }
-    }
+h1 {
+  font-size: 2em;
+  color: #114D68;
+  margin-top: 3%; }
+  @media only screen and (max-width: 991px) {
+    h1 {
+      font-size: 1.5em; } }
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 1em; } }
 
-    .divider {
-        grid-area: space;
-    }
+.me {
+  text-align: center;
+  padding: 0 10%; }
+  .me p {
+    margin-top: 5%;
+    color: #444; }
+  .me .profile {
+    border-radius: 50%;
+    width: 30%;
+    margin: 10px auto;
+    box-shadow: 0px 0px 25px 4px #AAA; }
 
-    header svg {
-        position: fixed;
-    }
+aside h6 {
+  font-size: 110%;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
+  @media only screen and (max-width: 991px) {
+    aside h6 {
+      font-size: 90%; } }
+  @media only screen and (max-width: 600px) {
+    aside h6 {
+      font-size: 80%; } }
+aside p {
+  font-size: 80%;
+  margin-bottom: 10px; }
+  aside p .logo {
+    height: 20px;
+    margin: 2px;
+    background: transparent; }
 
-        #name {
-            font-family: "Open Sans";
-        }
-    
-    .me {
-        grid-area: main;
-        text-align: center;
-        padding: 0 10%;
-    }
+.left {
+  text-align: right;
+  padding: 15px 0 15px 15px; }
+  .left h6 {
+    border-image: linear-gradient(to right, transparent, transparent, #114D68) 10; }
 
-        .subtext {
-            margin-top: 5%;
-        }
+.right {
+  text-align: left;
+  padding: 15px 15px 15px 0; }
+  .right h6 {
+    border-image: linear-gradient(to left, transparent, transparent, #114D68) 10; }
 
-        .me img.profile {
-            border-radius: 50%;
-            width: 30%;
-            margin: 10px auto;
-            box-shadow: 0px 0px 50px 4px #888;
-        }
+.project {
+  text-align: center;
+  padding: 15px; }
+  .project p img {
+    padding: 10px;
+    max-width: 90%;
+    box-shadow: 0px 0px 25px 4px #AAA; }
 
-        .logo {
-            height: 25px;
-            margin: 0 10px;
-        }
-            .logo-sm {
-                height: 20px;
-                width: 20px;
-                margin: 2px;
-                background: transparent;
-            }
+footer {
+  background: linear-gradient(to right, #277B7C, #114D68);
+  padding: 1.5% 0 1%; }
+  footer ul {
+    text-align: center;
+    list-style: none; }
+    footer ul li {
+      display: inline; }
+  footer .logo {
+    height: 25px;
+    margin: 0 10px; }
 
-        .left {
-            text-align: right;
-            grid-area: left;
-            padding: 15px 0 15px 15px;
-        }
-            .left p {
-                font-size: 80%;
-                margin-top: 10px;
-            }
-
-            aside h6 {
-                font-size: 110%;
-            }
-        
-            .left h6 {
-                border-bottom-width: 1px;
-                border-bottom-style: solid;
-                /* border-bottom-color: linear-gradient(to left, #743ad5 0%, #d53a9d 100%); */
-                border-image: linear-gradient(to right, transparent, transparent, #1C5A5E) 10;
-                /* -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00)) 21 30 30 21 repeat repeat; */
-            }
-        
-        .project {
-            grid-area: proj;
-            text-align: center;
-            padding: 15px;
-        }
-
-            .project p img {
-                padding: 10px;
-                max-width: 90%;
-                box-shadow: 0px 0px 25px 4px #AAA;
-            }
-
-    footer {
-        grid-area: footer;
-        background: teal;
-    }
+/*# sourceMappingURL=style.css.map */
